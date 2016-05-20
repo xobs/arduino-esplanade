@@ -1,0 +1,12 @@
+
+play.name=Kosagi Esplanade (audio)
+play.upload.tool=bossac
+play.upload.protocol=sam-ba
+play.upload.maximum_size=12288
+play.build.mcu=cortex-m0plus
+play.build.f_cpu=48000000L
+play.build.board=ESPLANADE_APP
+play.build.core=arduinoesplanade
+play.build.extra_flags=-D__ESPLANADE__ -mthumb -mfloat-abi=soft
+play.build.ldscript=KL02Z32-app.ld
+play.build.variant=play
