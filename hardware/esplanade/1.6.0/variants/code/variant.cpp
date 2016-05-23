@@ -41,8 +41,10 @@ void Esplanade_Main(void) {
 
   setup();
 
-  while (1)
+  while (1) {
+    runCallbacks();
     loop();
+  }
 }
 
 __attribute__ ((used, section(".progheader")))
