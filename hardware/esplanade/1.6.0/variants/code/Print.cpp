@@ -20,13 +20,12 @@
  Modified 03 August 2015 by Chuck Todd
  */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include "Arduino.h"
-
 #include "Print.h"
+
+extern "C" {
+  void float2str(float f,char*s,unsigned int fmt);
+};
 
 // Public Methods //////////////////////////////////////////////////////////////
 
@@ -93,7 +92,7 @@ size_t Print::print(unsigned long n, int base)
   else return printNumber(n, base);
 }
 
-size_t Print::print(double n, int digits)
+size_t Print::print(float n, int digits)
 {
   return printFloat(n, digits);
 }
@@ -164,7 +163,7 @@ size_t Print::println(unsigned long num, int base)
   return n;
 }
 
-size_t Print::println(double num, int digits)
+size_t Print::println(float num, int digits)
 {
   size_t n = print(num, digits);
   n += println();
@@ -200,12 +199,11 @@ size_t Print::printNumber(unsigned long n, uint8_t base)
   return write(str);
 }
 
-size_t Print::printFloat(double number, uint8_t digits)
+size_t Print::printFloat(float number, uint8_t digits)
 {
   size_t n = 0;
 
-#if 0
-  extern void float2str(float f,char*s,unsigned int fmt);
+#if 1
   char output[32];
   float2str(number, (char *)output, 0);
   n = strlen((char *)output);
