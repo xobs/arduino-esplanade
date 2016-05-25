@@ -206,10 +206,10 @@ long randomSeed(unsigned long seed);
 #define D1 0x00
 
 #define LED_BUILTIN       PTB(13)
-#define BUTTON_MODE       PTB(1)
-#define BUTTON_REC        BUTTON_MODE /* Silkscreened as "Rec" */
-#define BUTTON_RGB        PTB(13)
-#define BUTTON_INPUT      PTA(9)
+#define LED_A2            LED_BUILTIN
+#define BUTTON_A1         PTA(9)
+#define BUTTON_REC        PTB(1) /* Silkscreened as "Rec" */
+#define BUTTON_A3         PTB(13)
 #define LED_BUILTIN_RGB   PTA(6)
 
 #define LED_BUILTIN_RED   PTA(5)
