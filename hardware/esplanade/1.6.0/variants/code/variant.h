@@ -27,10 +27,10 @@
 #define VARIANT_NAME "Love to Code"
 
 /** Frequency of the board main oscillator */
-#define VARIANT_MAINOSC		12000000
+#define VARIANT_MAINOSC		48000000
 
 /** Master clock frequency */
-#define VARIANT_MCK			84000000
+#define VARIANT_MCK			48000000
 
 /*----------------------------------------------------------------------------
  *        Headers
