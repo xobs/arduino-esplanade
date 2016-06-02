@@ -23,6 +23,9 @@
  *        Definitions
  *----------------------------------------------------------------------------*/
 
+/** Name of the board */
+#define VARIANT_NAME "Love to Code"
+
 /** Frequency of the board main oscillator */
 #define VARIANT_MAINOSC		12000000
 
